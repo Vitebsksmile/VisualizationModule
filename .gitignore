@@ -1,0 +1,32 @@
+# Сборка (Build directories)
+build*/
+out/
+bin/
+lib/
+
+# Специфично для Qt Creator
+*.user
+*.pro.user*
+*.CMakeLists.txt.user*
+
+# CMake временные файлы
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+_deps/
+
+# Компиляторы и логи
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.log
+
+# Временные файлы ОС
+.DS_Store
+Thumbs.db
