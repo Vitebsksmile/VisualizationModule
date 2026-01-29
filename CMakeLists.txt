@@ -6,12 +6,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Gui Widgets )
+find_package(OpenCV REQUIRED)
 
 qt_standard_project_setup()
 
 qt_add_executable(VisualizationModule
     main.cpp
     mainwindow.h mainwindow.cpp
+    imageviewer.h imageviewer.cpp
 )
 
 
@@ -21,6 +23,7 @@ target_link_libraries(VisualizationModule
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
+        ${OpenCV_LIBS}
 )
 
 include(GNUInstallDirs)
