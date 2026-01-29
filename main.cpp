@@ -4,13 +4,10 @@
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication a(argc, argv);
+    QApplication a(argc, argv);
 
-    QQuickWindow::setDefaultAlphaBuffer(true);
 
-    QQmlApplicationEngine engine;
-    const QUrl url("qrc:/qt/qml/path/main.qml");
-    engine.load(url);
+
 
     return a.exec();
 }

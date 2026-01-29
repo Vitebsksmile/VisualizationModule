@@ -30,3 +30,6 @@ _deps/
 # Временные файлы ОС
 .DS_Store
 Thumbs.db
+
+# Мои файлы
+readmeGit.txt
