@@ -14,6 +14,7 @@ qt_add_executable(VisualizationModule
     main.cpp
     mainwindow.h mainwindow.cpp
     imageviewer.h imageviewer.cpp
+    visualiser.h visualiser.cpp
 )
 
 
