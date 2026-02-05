@@ -4,6 +4,12 @@
 #include <QWidget>
 #include <QVBoxLayout>
 
+#include "imageviewerwidget.h"
+#include "chartwidget.h"
+#include "statisticswidget.h"
+#include "exportmanager.h"
+
+
 class Visualiser : public QWidget
 {
     Q_OBJECT
@@ -15,7 +21,10 @@ public:
     void updateStatistics(double precision, double recall, double f1);
 
 private:
-
+    ImageViewerWidget *imageViewer;
+    ChartWidget *chartWidget;
+    StatisticsWidget *statsWidget;
+    ExportManager *exportManager;
 };
 
 #endif // VISUALISER_H

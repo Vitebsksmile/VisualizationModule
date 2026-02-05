@@ -1,6 +1,8 @@
 #include "mainwindow.h"
+#include "visualiser.h"
 
-MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent)
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
 {
     setMinimumSize(600, 300);
     setupUI();
@@ -16,5 +18,11 @@ void MainWindow::setupUI()
 {
     QSplitter *centralSplitter = new QSplitter(Qt::Horizontal);
 
+    Visualiser *viz = new Visualiser(this);
+    setCentralWidget(viz);
+    setCentralWidget(centralSplitter);
 
+    //  настройка панели инструментов
+    mainToolBar = addToolBar(tr("Main Tools"));
+    //setupToolBar();
 }

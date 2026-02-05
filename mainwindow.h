@@ -8,6 +8,8 @@
 #include <QSplitter>
 #include <QToolBar>
 
+#include "imageviewer.h"
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -19,11 +21,12 @@ public:
 private:
     QPushButton *btn1, *btn2;
 
+    //  панели инструментов
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
     //  приватный указатель на пользовательский виджет
-    //
+    ImageViewer *imageViewer;
 
     /*  объявление приватного метода для инициализации
      *  и компоновки всего интерфейса*/

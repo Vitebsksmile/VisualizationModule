@@ -5,7 +5,6 @@
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
-//#include <opencv4/opencv2/cvv/cvv.hpp>
 #include <opencv2/cvv/cvv.hpp>
 
 class ImageViewer : public QGraphicsView
@@ -19,7 +18,6 @@ private:
     QGraphicsPixmapItem *imageItem;
 
     void setupScene();
-
     QPixmap mapToPixmap(const cv::Mat &mat);
 };
 
