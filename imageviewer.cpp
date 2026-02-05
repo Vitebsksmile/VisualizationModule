@@ -1,3 +1,15 @@
 #include "imageviewer.h"
 
-ImageViewer::ImageViewer(QWidget *parent) {}
+#include <QPainter>
+
+ImageViewer::ImageViewer(QWidget *parent)
+    : QGraphicsView(parent)
+{
+    setupScene();
+
+}
+
+void ImageViewer::setupScene()
+{
+    scene = new QGraphicsScene(this);
+}

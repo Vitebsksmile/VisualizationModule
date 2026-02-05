@@ -22,8 +22,6 @@ qt_add_executable(VisualizationModule
 
 )
 
-
-
 target_link_libraries(VisualizationModule
     PRIVATE
         Qt6::Core
