@@ -12,8 +12,6 @@ qt_standard_project_setup()
 
 qt_add_executable(VisualizationModule
     main.cpp
-    mymodel.h mymodel.cpp
-    main.qml
 )
 
 qt_policy(SET QTP0001 NEW)  #   Новый путь (qrc:/qt/qml/)
