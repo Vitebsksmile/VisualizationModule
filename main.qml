@@ -4,9 +4,14 @@ import QtQuick.Controls
 Window {
     width: 640; height: 480
     visible: true
-    title: "'C++' Model + 'QML' View"
+    title: "OIS by QML"
 
-    ListView {
+    Text {
+        anchors.centerIn: parent
+        text: "Приложение запущено!"
+    }
+
+    /*ListView {
         anchors.fill: parent
         model: myGlobalModel    //  ссылаемся на модель по имени, к-рое дидим в main.cpp
         spacing: 5
@@ -25,5 +30,5 @@ Window {
                 font.pixelSize: 16
             }
         }
-    }
+    }*/
 }
