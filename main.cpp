@@ -1,7 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>  //  нужен для передачи модели в QML
-//#include <QApplication>
 #include <QTimer>
 
 #include "MyModel.h"

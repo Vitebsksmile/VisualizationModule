@@ -12,12 +12,7 @@ qt_standard_project_setup()
 
 qt_add_executable(VisualizationModule
     main.cpp
-    mainwindow.h mainwindow.cpp
-    imageviewer.h imageviewer.cpp
-    visualiser.h visualiser.cpp
-    #mymodel.h mymodel.cpp
-    mydelegate.h mydelegate.cpp
-    #myview.h myview.cpp
+    mymodel.h mymodel.cpp
     main.qml
 )
 
