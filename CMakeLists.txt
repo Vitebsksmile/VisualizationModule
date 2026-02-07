@@ -17,7 +17,7 @@ qt_add_executable(VisualizationModule
     visualiser.h visualiser.cpp
     #mymodel.h mymodel.cpp
     mydelegate.h mydelegate.cpp
-    myview.h myview.cpp
+    #myview.h myview.cpp
     main.qml
 )
 
