@@ -2,9 +2,9 @@ import QtQuick 2.15
 import QtQuick.Controls
 
 Window {
-    width: 400; height: 300
+    width: 640; height: 480
     visible: true
-    title: "C++ Model + QML View"
+    title: "'C++' Model + 'QML' View"
 
     ListView {
         anchors.fill: parent

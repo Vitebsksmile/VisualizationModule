@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.19)
-project(VisualizationModule LANGUAGES CXX)
+project(VisualizationModule VERSION 0.1 LANGUAGES CXX)
 
 set (CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Gui Widgets )
-find_package(OpenCV REQUIRED)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Gui Qml Quick )
+#find_package(OpenCV REQUIRED)
 
 qt_standard_project_setup()
 
@@ -17,16 +17,17 @@ qt_add_executable(VisualizationModule
 qt_policy(SET QTP0001 NEW)  #   Новый путь (qrc:/qt/qml/)
 qt_add_qml_module(VisualizationModule
     URI path
+    VERSION 1.0
     QML_FILES main.qml
     SOURCES mymodel.h mymodel.cpp
 )
 
 target_link_libraries(VisualizationModule
     PRIVATE
-        Qt6::Quick
         Qt6::Gui
-        Qt6::Widgets
-        ${OpenCV_LIBS}
+        Qt6::Qml
+        Qt6::Quick
+        #${OpenCV_LIBS}
 )
 
 include(GNUInstallDirs)
