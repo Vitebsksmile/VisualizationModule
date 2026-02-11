@@ -5,7 +5,7 @@ set (CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Gui Qml Quick )
+find_package(Qt6 6.5 REQUIRED COMPONENTS Gui Qml QuickControls2 )
 #find_package(OpenCV REQUIRED)
 
 qt_standard_project_setup()
@@ -26,7 +26,7 @@ target_link_libraries(VisualizationModule
     PRIVATE
         Qt6::Gui
         Qt6::Qml
-        Qt6::Quick
+        Qt6::QuickControls2
         #${OpenCV_LIBS}
 )
 
