@@ -23,6 +23,7 @@ qt_add_qml_module(VisualizationModule
         ImageView.qml
         ButtonSideBar.qml
         VideoViewer.qml
+
     SOURCES
         filehandler.h filehandler.cpp
 )
