@@ -27,7 +27,7 @@ qt_add_qml_module(VisualizationModule
         filehandler.h filehandler.cpp
         SOURCES
         QML_FILES
-        QML_FILES MyLog.qml
+        QML_FILES
 )
 
 target_link_libraries(VisualizationModule
