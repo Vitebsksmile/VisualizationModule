@@ -2,7 +2,6 @@
 #include <QQmlApplicationEngine>
 //#include <QQmlContext>  //  нужен для передачи модели в QML
 
-#include "MyModel.h"
 
 
 int main(int argc, char *argv[])

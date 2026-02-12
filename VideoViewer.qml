@@ -6,7 +6,7 @@ Rectangle {
     id: root
     implicitWidth: 200
     implicitHeight: 200
-    color: "lightred"
+    color: "lightgreen"
     radius: 10
 
     property alias handler: fileHandler

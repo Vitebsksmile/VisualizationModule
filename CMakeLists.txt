@@ -24,7 +24,6 @@ qt_add_qml_module(VisualizationModule
         ButtonSideBar.qml
         VideoViewer.qml
     SOURCES
-
         filehandler.h filehandler.cpp
 )
 

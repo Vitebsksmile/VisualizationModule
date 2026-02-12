@@ -61,7 +61,6 @@ ApplicationWindow {
         //  боковое меню
         Rectangle {
             id: sideBar
-            //color: "#2c3e50"
             color: Qt.rgba(44/255, 62/255, 80/255, 0.9)
             radius: 10
 
@@ -70,9 +69,13 @@ ApplicationWindow {
             SplitView.maximumWidth: 300
 
             ButtonSideBar {
+                id: sideBarButton
                 //  передаем ссылки на объекты из viewer
-                targetHandler: viewer.handler
-                targetPopup: viewer.popup
+                //targetHandler: viewer.handler
+                //targetPopup: viewer.popup
+                // Используем безопасный доступ через Loader.item
+                targetHandler: contentLoader.item ? contentLoader.item.handler : null
+                targetPopup: contentLoader.item ? contentLoader.item.popup : null
             }
         }
 
@@ -81,10 +84,32 @@ ApplicationWindow {
         ColumnLayout {
             SplitView.fillWidth: true
 
-            ImageView {
-                id: viewer
+            Loader {
+                id: contentLoader
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+
+                //  динамический выбор компонента
+                sourceComponent: sideBarButton.isVideoSelected ? videoComponent : imageComponent
+            }
+
+            Component {
+                id: imageComponent
+                ImageView {
+                    id: imageViewer
+                    //Layout.fillWidth: true
+                    //Layout.fillHeight: true
+                    //  св-ва, к-рые я вы передавали:
+                    //handler: imageViewer.handler (если нужно)
+                }
+            }
+
+            Component {
+                id: videoComponent
+                VideoViewer {
+                    id: videoViewer
+                    //  настройки для видео
+                }
             }
         }
     }

@@ -12,9 +12,25 @@ ColumnLayout {
     property var targetHandler: null
     property var targetPopup: null
 
+    //  св-во для RadioButton
+    readonly property bool isVideoSelected: videoRadio.checked
+
     anchors.fill: parent
     anchors.margins: 3
     spacing: 3
+
+    RadioButton {
+        id: imageRadio
+        text: "Изображение"
+        checked: true
+        palette.windowText: "white"
+    }
+
+    RadioButton {
+        id: videoRadio
+        text: "Видео"
+        palette.windowText: "white"
+    }
 
     Button {
         text: "Выбрать фото"
