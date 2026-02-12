@@ -18,8 +18,15 @@ qt_policy(SET QTP0001 NEW)  #   Новый путь (qrc:/qt/qml/)
 qt_add_qml_module(VisualizationModule
     URI path
     VERSION 1.0
-    QML_FILES main.qml
-    SOURCES mymodel.h mymodel.cpp
+    QML_FILES
+        main.qml
+        ImageView.qml
+        ButtonSideBar.qml
+    SOURCES
+        mymodel.h mymodel.cpp
+        filehandler.h filehandler.cpp
+        SOURCES
+        QML_FILES
 )
 
 target_link_libraries(VisualizationModule

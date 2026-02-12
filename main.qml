@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtCore
 import QtQuick.Controls
-import QtQuick.Controls.Basic
+import QtQuick.Layouts
 
 
 ApplicationWindow {
@@ -47,14 +47,6 @@ ApplicationWindow {
                 onTriggered: aboutDialog.open()
             }
         }
-
-    }
-
-
-    //  прозрачный вспомогательный виджет
-    Rectangle {
-        anchors.fill: parent
-        color: "#eeeeee"
     }
 
 
@@ -71,27 +63,29 @@ ApplicationWindow {
             color: Qt.rgba(44/255, 62/255, 80/255, 0.9)
             radius: 10
 
-
-            SplitView.preferredWidth: 200
-            SplitView.minimumWidth: 150
+            SplitView.preferredWidth: 150
+            SplitView.minimumWidth: 100
             SplitView.maximumWidth: 300
 
-            Text {
-                anchors.centerIn: parent
-                text: "Side Bar"
-                color: "white"
+            ButtonSideBar {
+                //  передаем ссылки на объекты из viewer
+                targetHandler: viewer.handler
+                targetPopup: viewer.popup
             }
         }
 
 
         //  Центр окна (ваш контент)
-        Rectangle {
+        ColumnLayout {
             SplitView.fillWidth: true
-            color: "lightblue"
-            radius: 10
+
+            ImageView {
+                id: viewer
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+            }
         }
     }
-
 
 
     /*ListView {
