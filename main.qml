@@ -10,6 +10,7 @@ ApplicationWindow {
     title: "OIS by QML"
 
 
+//------------------------START MENU_BAR------------------------
     //  1. Описываем действия (Actions), чтобы не дублировать код
     Action {
         id: openAction
@@ -48,8 +49,9 @@ ApplicationWindow {
             }
         }
     }
+//------------------------END MENU_BAR------------------------
 
-
+//------------------------START HEADER------------------------
     SplitView {
         id: splitView
         anchors.fill: parent
@@ -86,26 +88,7 @@ ApplicationWindow {
             }
         }
     }
+//------------------------END HEADER------------------------
 
 
-    /*ListView {
-        anchors.fill: parent
-        model: myGlobalModel    //  ссылаемся на модель по имени, к-рое дидим в main.cpp
-        spacing: 5
-
-        //  DELEGATE: Как выглядит одна строка
-        delegate: Rectangle {
-            width: parent.width
-            height: 40
-            color: "lightgray"
-            border.color: "darkgray"
-
-            Text {
-                anchors.centerIn: parent
-                text: name  //  используем роль 'name' из нашей C++ модели
-                color: "blue"
-                font.pixelSize: 16
-            }
-        }
-    }*/
 }
